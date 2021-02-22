@@ -1,0 +1,16 @@
+Paths de los Rest de jorge:
+
+https://wssubjectevaluations.herokuapp.com/subjects
+http://localhost:9090/subjects -> GET
+http://localhost:9090/subjects/findById/{id} -> GET
+http://localhost:9090/subjects/addSubject -> POST
+http://localhost:9090/subjects/updateSubject -> PUT
+
+{
+"id":1,
+"name":"Cience",
+"state":true,
+"dateCreation":"2019-10-11",
+"dateMerge":null,
+"dateRemoved":null
+}

@@ -1,0 +1,12 @@
+tech\istrategies\geawsintegrador\wsdl\CalculatorSoap.class
+tech\istrategies\geawsintegrador\wsdl\Divide.class
+tech\istrategies\geawsintegrador\wsdl\Calculator.class
+tech\istrategies\geawsintegrador\wsdl\Subtract.class
+tech\istrategies\geawsintegrador\wsdl\AddResponse.class
+tech\istrategies\geawsintegrador\wsdl\package-info.class
+tech\istrategies\geawsintegrador\wsdl\MultiplyResponse.class
+tech\istrategies\geawsintegrador\wsdl\Add.class
+tech\istrategies\geawsintegrador\wsdl\SubtractResponse.class
+tech\istrategies\geawsintegrador\wsdl\DivideResponse.class
+tech\istrategies\geawsintegrador\wsdl\Multiply.class
+tech\istrategies\geawsintegrador\wsdl\ObjectFactory.class
