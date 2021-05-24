@@ -1,4 +1,4 @@
-package com.example.working.service;
+package com.reports.example.reporter.service;
 
 import java.util.ArrayList;
 import java.util.Comparator;
@@ -6,12 +6,14 @@ import java.util.List;
 import java.util.Scanner;
 import java.util.regex.Pattern;
 
-import com.example.working.entities.Car;
-import com.example.working.entities.MathCalculator;
-import com.example.working.entities.ObjectInPlane;
-import com.example.working.entities.Polygon;
-import com.example.working.entities.Rectangle;
-import com.example.working.entities.Triangle;
+import com.reports.example.reporter.dto.Car;
+import com.reports.example.reporter.dto.MathCalculator;
+import com.reports.example.reporter.dto.ObjectInPlane;
+import com.reports.example.reporter.dto.Polygon;
+import com.reports.example.reporter.dto.Rectangle;
+import com.reports.example.reporter.dto.Triangle;
+
+
 
 /*Service: Esta sección en algunos patrones de diseño suele delegar se a un eslabón entre el acceso de los datos en las entidades y los controladores, esta sección se le delega la lógica del negocio para tener un proyecto mejor estructurado y ordenado */
 public class PooService {
@@ -51,11 +53,10 @@ public class PooService {
 	private String inputText;
 	private List<Pattern> patterns;
 
-	//public static final String pUpperCase = ".*[A-Z].*";
-	//public static final String pLowerCase = ".*[a-z].*";
-	//public static final String pEspecialCharacters = ".*[`~!@#$%^&*()\\-_=+\\\\|\\[{\\]};:'\",<.>/?].*";
-	// public static final String pPersonalizedCharacter = ".*\\d.*";
-	public static final String pNit = "^\\d{4}[-]?\\d{6}[-]?\\d{4}[-]?\\d{1}$";
+	public static final String pUpperCase = ".*[A-Z].*";
+	public static final String pLowerCase = ".*[a-z].*";
+	public static final String pEspecialCharacters = ".*[`~!@#$%^&*()\\-_=+\\\\|\\[{\\]};:'\",<.>/?].*";
+	public static final String pPersonalizedCharacter = ".*\\d.*";
 
 	/* Sobrecarga de métodos */
 	public void instanceNewCar(String carLicencePlate1, String carLicencePlate2) {
@@ -720,11 +721,10 @@ public class PooService {
 
 	public void init() {
 		patterns = new ArrayList<Pattern>();
-		//patterns.add(Pattern.compile(pUpperCase));
-		//patterns.add(Pattern.compile(pLowerCase));
-		// patterns.add(Pattern.compile(pPersonalizedCharacter));
-		//patterns.add(Pattern.compile(pEspecialCharacters));
-		patterns.add(Pattern.compile(pNit));
+		patterns.add(Pattern.compile(pUpperCase));
+		patterns.add(Pattern.compile(pLowerCase));
+		patterns.add(Pattern.compile(pPersonalizedCharacter));
+		patterns.add(Pattern.compile(pEspecialCharacters));
 	}
 
 	public void patternExercise() {
@@ -753,7 +753,6 @@ public class PooService {
 				for (Pattern p : patterns) {
 					if (p.matcher(inputText).matches()) {
 						System.out.println("The text entered matches the patterns established by the system!");
-						System.out.println("Pattern: " + p.pattern());
 						break;
 					}
 				}
